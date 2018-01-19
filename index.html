@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>List of users</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+	<header>
+    <div class="container">
+           <div class="row header">
+	            <div class="col-sm-6 col-sm-offset-4">
+	                <h1>List of users</h1>
+	                <p>App to manage your list of users</p>
+	            </div>
+	        </div>
+    </div>
+</header>
+<section>
+    <div class="container">
+        <div class="row add">
+            <div class="col-md-5">
+                <div class="new-user panel panle-success">
+                    <div class="panel-heading">
+                        <h3>New User</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form novalidate name="new-user" id="myForm">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label class="input-group" for="username">Username</label>
+                                    <input id="username" type="text" name="username" class="form-control" placeholder="Username" required data-regExp="^[a-zA-Z]+$">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label class="input-group" for="email">E-mail adress</label>
+                                    <input id="email" type="text" name="email" class="form-control" placeholder="e-mail" required data-regExp="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                   <select name="role" class="form-control" required>
+                                       <option value="" selected disabled>Your role</option>
+                                       <option value="admin">Admin</option>
+                                       <option value="user">User</option>
+                                       <option value="guest">Guest</option>
+                                   </select>
+                                </div>
+                            </div>
+                            <button class="btn btn-success" type="submit"> Submit </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-7">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3>Users</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th data-type="username">Username</th>
+                                    <th data-type="email">E-mail</th>
+                                    <th data-type="role">Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer> 
+	<span> Copyright © 2018, Maria Pikalova</span>
+</footer>
+
+
+	<script src="script/main.js"></script>
+</body>
+</html>
